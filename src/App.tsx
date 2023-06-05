@@ -30,7 +30,7 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Planet isSmallScreen={isSmallScreen} planet={data[0]} />}
+          element={<Planet isSmallScreen={isSmallScreen} planet={data[2]} />}
         />
         {data.map((planet, index) => {
           return (

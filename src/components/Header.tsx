@@ -4,33 +4,15 @@ import data from "../data/data.json";
 
 import BurgerMenu from "../assets/icon-hamburger.svg";
 import Arrow from "../assets/icon-chevron.svg";
-export default function Header() {
+export default function Header(props: any) {
   const [hamburgerMenu, setHamgurgerMenu] = useState<boolean>(false);
-
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-    console.log(mediaQuery);
-    setIsSmallScreen(mediaQuery.matches);
-
-    const handleScreenChange = (e: MediaQueryListEvent | MediaQueryList) => {
-      setIsSmallScreen(e.matches);
-    };
-
-    mediaQuery.addListener(handleScreenChange);
-
-    return () => {
-      mediaQuery.removeListener(handleScreenChange);
-    };
-  }, []);
 
   return (
     <header className=" flex gap-y-[1rem] justify-between items-center py-4 px-6 bg-transparent relative before:absolute  before:left-0 before:bottom-0 before:w-full before:h-px before:bg-white before:opacity-20 md:py-8 md:justify-center md:flex-col desktop:flex-row desktop:items-center desktop:py-[2.2rem] desktop:px-[3.2rem] desktop:justify-between">
       <h1 className=" text-white font-antionio font-normal text-[2.8rem] leading-[3.6rem] tracking-[0.1rem] cursor-pointer">
         THE PLANETS
       </h1>
-      {isSmallScreen ? (
+      {props.isSmallScreen ? (
         <img
           src={BurgerMenu}
           alt="burger menu"
@@ -43,11 +25,10 @@ export default function Header() {
         />
       ) : null}
 
-      {!isSmallScreen ? (
+      {!props.isSmallScreen ? (
         <nav>
           <ul className="flex gap-x-[3.3rem] desktop:mt-[-2rem]">
             {data.map((planet) => {
-              console.log(planet["planet-color"]);
               return (
                 <Link to={planet.name} key={planet["planet-color"]}>
                   <li
@@ -63,11 +44,11 @@ export default function Header() {
         </nav>
       ) : null}
 
-      {isSmallScreen ? (
+      {props.isSmallScreen ? (
         <div
           className={`flex flex-col fixed top-[9.3rem] left-0 w-full py-6 transition-transform transition-1000 ${
             hamburgerMenu ? "translate-x-[0]" : "translate-x-[-100%]"
-          } md:hidden`}
+          } md:hidden z-10`}
         >
           {data.map((planet) => {
             return (

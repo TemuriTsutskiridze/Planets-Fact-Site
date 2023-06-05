@@ -18,9 +18,41 @@
     "radius": "2,439.7 KM",
     "temperature": "430°c",
     "images": {
-      "planet": "./assets/planet-mercury.svg",
-      "internal": "./assets/planet-mercury-internal.svg",
-      "geology": "./assets/geology-mercury.png"
+      "planet": "src/assets/planet-mercury.svg",
+      "internal": "src/assets/planet-mercury-internal.svg",
+      "geology": "src/assets/geology-mercury.png"
+    },
+    "image-sizes": {
+      "mobile": {
+        "planet": {
+          "width": "11.1rem",
+          "height": "11.1rem"
+        },
+        "geology": {
+          "width": "8.7rem",
+          "height": "10.6rem"
+        }
+      },
+      "tablet": {
+        "planet": {
+          "width": "18.4rem",
+          "height": "18.4rem"
+        },
+        "geology": {
+          "width": "8.7rem",
+          "height": "10.6rem"
+        }
+      },
+      "desktop": {
+        "planet": {
+          "width": "29rem",
+          "height": "29rem"
+        },
+        "geology": {
+          "width": "16.3rem",
+          "height": "19.9rem"
+        }
+      }
     },
     "planet-color": "#419EBB",
     "burger-menu-icon-color": "#DEF4FC"
@@ -44,9 +76,41 @@
     "radius": "6,051.8 KM",
     "temperature": "471°c",
     "images": {
-      "planet": "./assets/planet-venus.svg",
-      "internal": "./assets/planet-venus-internal.svg",
-      "geology": "./assets/geology-venus.png"
+      "planet": "src/assets/planet-venus.svg",
+      "internal": "src/assets/planet-venus-internal.svg",
+      "geology": "src/assets/geology-venus.png"
+    },
+    "image-sizes": {
+      "mobile": {
+        "planet": {
+          "width": "15.4rem",
+          "height": "15.4rem"
+        },
+        "geology": {
+          "width": "8.7rem",
+          "height": "10.6rem"
+        }
+      },
+      "tablet": {
+        "planet": {
+          "width": "25.3rem",
+          "height": "25.3rem"
+        },
+        "geology": {
+          "width": "8.7rem",
+          "height": "10.6rem"
+        }
+      },
+      "desktop": {
+        "planet": {
+          "width": "40rem",
+          "height": "40rem"
+        },
+        "geology": {
+          "width": "16.3rem",
+          "height": "19.9rem"
+        }
+      }
     },
     "planet-color": "#EDA249",
     "burger-menu-icon-color": "#F7CC7F"
@@ -66,13 +130,45 @@
       "source": "https://en.wikipedia.org/wiki/Earth#Surface"
     },
     "rotation": "0.99 Days",
-    "revolution": "365.26 Days",
+    "revolution": "3610.66 Days",
     "radius": "6,371 KM",
     "temperature": "16°c",
     "images": {
-      "planet": "./assets/planet-earth.svg",
-      "internal": "./assets/planet-earth-internal.svg",
-      "geology": "./assets/geology-earth.png"
+      "planet": "src/assets/planet-earth.svg",
+      "internal": "src/assets/planet-earth-internal.svg",
+      "geology": "src/assets/geology-earth.png"
+    },
+    "image-sizes": {
+      "mobile": {
+        "planet": {
+          "width": "17.3rem",
+          "height": "17.3rem"
+        },
+        "geology": {
+          "width": "8.7rem",
+          "height": "10.6rem"
+        }
+      },
+      "tablet": {
+        "planet": {
+          "width": "28.5rem",
+          "height": "28.5rem"
+        },
+        "geology": {
+          "width": "8.7rem",
+          "height": "10.6rem"
+        }
+      },
+      "desktop": {
+        "planet": {
+          "width": "45rem",
+          "height": "45rem"
+        },
+        "geology": {
+          "width": "16.3rem",
+          "height": "19.9rem"
+        }
+      }
     },
     "planet-color": "#6D2ED5",
     "burger-menu-icon-color": "#545BFE"
@@ -96,9 +192,41 @@
     "radius": "3,389.5 KM",
     "temperature": "-28°c",
     "images": {
-      "planet": "./assets/planet-mars.svg",
-      "internal": "./assets/planet-mars-internal.svg",
-      "geology": "./assets/geology-mars.png"
+      "planet": "src/assets/planet-mars.svg",
+      "internal": "src/assets/planet-mars-internal.svg",
+      "geology": "src/assets/geology-mars.png"
+    },
+    "image-sizes": {
+      "mobile": {
+        "planet": {
+          "width": "12.9rem",
+          "height": "12.9rem"
+        },
+        "geology": {
+          "width": "7.5rem",
+          "height": "8.2rem"
+        }
+      },
+      "tablet": {
+        "planet": {
+          "width": "21.3rem",
+          "height": "21.3rem"
+        },
+        "geology": {
+          "width": "8.7rem",
+          "height": "10.6rem"
+        }
+      },
+      "desktop": {
+        "planet": {
+          "width": "33.6rem",
+          "height": "33.6rem"
+        },
+        "geology": {
+          "width": "16.3rem",
+          "height": "19.9rem"
+        }
+      }
     },
     "planet-color": "#D14C32",
     "burger-menu-icon-color": "#FF6A45"
@@ -122,9 +250,41 @@
     "radius": "69,911 KM",
     "temperature": "-108°c",
     "images": {
-      "planet": "./assets/planet-jupiter.svg",
-      "internal": "./assets/planet-jupiter-internal.svg",
-      "geology": "./assets/geology-jupiter.png"
+      "planet": "src/assets/planet-jupiter.svg",
+      "internal": "src/assets/planet-jupiter-internal.svg",
+      "geology": "src/assets/geology-jupiter.png"
+    },
+    "image-sizes": {
+      "mobile": {
+        "planet": {
+          "width": "22.4rem",
+          "height": "22.4rem"
+        },
+        "geology": {
+          "width": "8.7rem",
+          "height": "10.6rem"
+        }
+      },
+      "tablet": {
+        "planet": {
+          "width": "36.9rem",
+          "height": "36.9rem"
+        },
+        "geology": {
+          "width": "8.7rem",
+          "height": "10.6rem"
+        }
+      },
+      "desktop": {
+        "planet": {
+          "width": "58.2rem",
+          "height": "58.2rem"
+        },
+        "geology": {
+          "width": "16.3rem",
+          "height": "19.9rem"
+        }
+      }
     },
     "planet-color": "#D83A34",
     "burger-menu-icon-color": "#ECAD7A"
@@ -148,9 +308,41 @@
     "radius": "58,232 KM",
     "temperature": "-138°c",
     "images": {
-      "planet": "./assets/planet-saturn.svg",
-      "internal": "./assets/planet-saturn-internal.svg",
-      "geology": "./assets/geology-saturn.png"
+      "planet": "src/assets/planet-saturn.svg",
+      "internal": "src/assets/planet-saturn-internal.svg",
+      "geology": "src/assets/geology-saturn.png"
+    },
+    "image-sizes": {
+      "mobile": {
+        "planet": {
+          "width": "25.6rem",
+          "height": "25.6rem"
+        },
+        "geology": {
+          "width": "8.7rem",
+          "height": "10.6rem"
+        }
+      },
+      "tablet": {
+        "planet": {
+          "width": "42.2rem",
+          "height": "42.2rem"
+        },
+        "geology": {
+          "width": "8.7rem",
+          "height": "10.6rem"
+        }
+      },
+      "desktop": {
+        "planet": {
+          "width": "66.6rem",
+          "height": "66.6rem"
+        },
+        "geology": {
+          "width": "16.3rem",
+          "height": "19.9rem"
+        }
+      }
     },
     "planet-color": "#CD5120",
     "burger-menu-icon-color": "#FCCB6B"
@@ -174,9 +366,41 @@
     "radius": "25,362 KM",
     "temperature": "-195°c",
     "images": {
-      "planet": "./assets/planet-uranus.svg",
-      "internal": "./assets/planet-uranus-internal.svg",
-      "geology": "./assets/geology-uranus.png"
+      "planet": "src/assets/planet-uranus.svg",
+      "internal": "src/assets/planet-uranus-internal.svg",
+      "geology": "src/assets/geology-uranus.png"
+    },
+    "image-sizes": {
+      "mobile": {
+        "planet": {
+          "width": "17.6rem",
+          "height": "17.6rem"
+        },
+        "geology": {
+          "width": "8.7rem",
+          "height": "10.6rem"
+        }
+      },
+      "tablet": {
+        "planet": {
+          "width": "29rem",
+          "height": "29rem"
+        },
+        "geology": {
+          "width": "8.7rem",
+          "height": "10.6rem"
+        }
+      },
+      "desktop": {
+        "planet": {
+          "width": "45.8rem",
+          "height": "45.8rem"
+        },
+        "geology": {
+          "width": "16.3rem",
+          "height": "19.9rem"
+        }
+      }
     },
     "planet-color": "#1EC1A2",
     "burger-menu-icon-color": "#65F0D5"
@@ -200,9 +424,41 @@
     "radius": "24,622 KM",
     "temperature": "-201°c",
     "images": {
-      "planet": "./assets/planet-neptune.svg",
-      "internal": "./assets/planet-neptune-internal.svg",
-      "geology": "./assets/geology-neptune.png"
+      "planet": "src/assets/planet-neptune.svg",
+      "internal": "src/assets/planet-neptune-internal.svg",
+      "geology": "src/assets/geology-neptune.png"
+    },
+    "image-sizes": {
+      "mobile": {
+        "planet": {
+          "width": "17.3rem",
+          "height": "17.3rem"
+        },
+        "geology": {
+          "width": "8.7rem",
+          "height": "10.6rem"
+        }
+      },
+      "tablet": {
+        "planet": {
+          "width": "28.5rem",
+          "height": "28.5rem"
+        },
+        "geology": {
+          "width": "8.7rem",
+          "height": "10.6rem"
+        }
+      },
+      "desktop": {
+        "planet": {
+          "width": "45rem",
+          "height": "45rem"
+        },
+        "geology": {
+          "width": "16.3rem",
+          "height": "19.9rem"
+        }
+      }
     },
     "planet-color": "#2D68F0",
     "burger-menu-icon-color": "#497EFA"

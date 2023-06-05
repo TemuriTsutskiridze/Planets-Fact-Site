@@ -58,12 +58,12 @@ export default function Planet(props: IProps) {
             ) : null}
           </div>
 
-          <div className="mt-[9.8rem]">
-            <div className="flex flex-col gap-4 justify-center text-center text-white">
-              <h1 className="font-antonio text-[4rem] font-normal leading-13 uppercase">
+          <div className="mt-[9.8rem] md:flex md:justify-between md:w-full md:px-[3.9rem] md:items-end">
+            <div className="flex flex-col gap-4 justify-center text-center text-white md:items-start md:text-left">
+              <h1 className="font-antonio text-[4rem] font-normal leading-13 uppercase md:text-[4.8rem] md:leading-[6.2rem]">
                 {props.planet.name}
               </h1>
-              <p className="font-spartan text-[1.1rem] leading-[2.2rem] font-normal mx-[6rem] max-w-[60rem]">
+              <p className="font-spartan text-[1.1rem] leading-[2.2rem] font-normal mx-[6rem] max-w-[60rem] md:mx-0 md:max-w-[45ch] md:text-[1.5rem]">
                 {activeState === 0
                   ? props.planet.overview.content
                   : activeState === 1
@@ -89,7 +89,7 @@ export default function Planet(props: IProps) {
             </div>
 
             {!props.isSmallScreen ? (
-              <div>
+              <div className="flex flex-col gap-4 w-[28.1rem] text-white mb-[6rem]">
                 {[
                   { number: "01", name: "OVERVIEW", currentNumber: 0 },
                   {
@@ -105,11 +105,19 @@ export default function Planet(props: IProps) {
                       onClick={() => {
                         setActiveState(element.currentNumber);
                       }}
-                      className={`flex gap-[1.7rem] py-[0.8rem] px-5 justify-start items-center ${
-                        element.currentNumber === activeState
-                          ? `bg-${props.planet["planet-color"]}`
-                          : null
-                      }`}
+                      className="flex gap-[1.6rem] py-[0.8rem] px-5 justify-start items-center text-[1.5rem] leading-[2.5rem] tracking-[1.9px] font-semiboldborder-white cursor-pointer"
+                      style={{
+                        background: `${
+                          element.currentNumber === activeState
+                            ? props.planet["planet-color"]
+                            : "none"
+                        }`,
+                        border: `${
+                          element.currentNumber === activeState
+                            ? "none"
+                            : "1px solid rgba(255, 255, 255, 0.5)"
+                        }`,
+                      }}
                     >
                       <span>{element.number}</span>
                       <p>{element.name}</p>
@@ -120,7 +128,7 @@ export default function Planet(props: IProps) {
             ) : null}
           </div>
 
-          <div className="flex flex-col gap-[0.8rem] text-white mt-[2.8rem] mx-6 w-full max-w-[50rem] mb-[2.7rem] px-[2rem]">
+          <div className="flex flex-col gap-[0.8rem] text-white mt-[2.8rem] mx-6 w-full max-w-[50rem] mb-[2.7rem] px-[2rem] md:flex-row  md:max-w-[100%] md:w-screen">
             {[
               { name: "ROTATION TIME", info: "rotation" },
               { name: "REVOLUTION TIME", info: "revolution" },
@@ -129,13 +137,13 @@ export default function Planet(props: IProps) {
             ].map((element: { name: string; info: string }, index) => {
               return (
                 <div
-                  className="flex px-6 py-4 justify-between items-center w-full border border-white border-opacity-50 min-w"
+                  className="flex px-6 py-4 justify-between items-center w-full border border-white border-opacity-50 md:flex-col md:items-start md:gap-[0.6rem] md:py-4"
                   key={index}
                 >
                   <p className="font-spartan text-[0.8rem] leading-[1.6rem] opacity-50 tracking-[0.7px]">
                     {element.name}
                   </p>
-                  <p className="font-antonio text-[2rem] leading-[2.6rem] tracking-[-0.75px]">
+                  <p className="font-antonio text-[2rem] leading-[2.6rem] tracking-[-0.75px] md:text-[2.4rem] md:leading-[3.1rem]">
                     {props.planet[element.info]}
                   </p>
                 </div>

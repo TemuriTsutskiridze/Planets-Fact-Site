@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import data from "../data/data.json";
 
 import BurgerMenu from "../assets/icon-hamburger.svg";

@@ -32,9 +32,5 @@ To get a local copy of the project up and running, follow these steps:
 
 ## Design Preview
 
-![Image1](./public/design-preview/active-states.jpg)
-![Image2](./public/design-preview/complete-state-desktop.jpg)
-![Image3](./public/design-preview/complete-state-mobile.jpg)
-![Image4](./public/design-preview/desktop-design.jpg)
-![Image5](./public/design-preview/desktop-preview.jpg)
-![Image6](./public/design-preview/mobile-design.jpg)
+![Image1](./public/preview/preview.jpg)
+![Image2](./public/preview/mobile-preview.png)

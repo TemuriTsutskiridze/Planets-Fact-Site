@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import data from "../data/data.json";
 
-import BurgerMenu from "../assets/icon-hamburger.svg";
-import Arrow from "../assets/icon-chevron.svg";
+import BurgerMenu from "/assets/icon-hamburger.svg";
+import Arrow from "/assets/icon-chevron.svg";
 export default function Header(props: any) {
   const [hamburgerMenu, setHamgurgerMenu] = useState<boolean>(false);
 

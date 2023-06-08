@@ -46,7 +46,7 @@ export default function Header(props: any) {
 
       {props.isSmallScreen ? (
         <div
-          className={`flex flex-col fixed top-[9.3rem] left-0 w-full py-6 transition-transform transition-1000 ${
+          className={`flex flex-col fixed top-[9.3rem] left-0 w-full py-6 transition-transform transition-1000 backdrop-blur-[40px] ${
             hamburgerMenu ? "translate-x-[0]" : "translate-x-[-100%]"
           } md:hidden z-10`}
         >

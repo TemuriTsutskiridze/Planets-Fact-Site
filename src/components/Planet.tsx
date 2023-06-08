@@ -37,7 +37,7 @@ export default function Planet(props: IProps) {
       </div>
       <main>
         <div className="flex flex-col items-center desktop:flex-row desktop:px-[16.5rem] desktop:justify-between">
-          <div className="relative mt-[9.5rem] w-fit">
+          <div className="relative mt-[9.5rem] w-fit px-[5rem]">
             <img
               src={
                 activeState === 0

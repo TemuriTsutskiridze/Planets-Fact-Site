@@ -1,7 +1,7 @@
 import { useState } from "react";
 import IPlanet from "../interfaces/Planet";
 
-import SourceIcon from "../assets/icon-source.svg";
+import SourceIcon from "/assets/icon-source.svg";
 
 interface IProps {
   isSmallScreen: boolean;

@@ -20,7 +20,7 @@ To get a local copy of the project up and running, follow these steps:
 1.  Clone the repository:
 
     ```shell
-    git clone https://github.com/TemuriTsutskiridze/Interactive-Card-Details.git
+    git clone https://github.com/TemuriTsutskiridze/Planets-Fact-Site.git
     ```
 
 2.  Install the dependencies:

@@ -24,7 +24,7 @@ function App() {
     };
   }, []);
   return (
-    <div className=" min-h-screen bg-[url('./background-stars.svg')] bg-space">
+    <div className=" min-h-screen bg-[url('./assets/background-stars.svg')] bg-space">
       <Header isSmallScreen={isSmallScreen} />
 
       <Routes>

@@ -52,7 +52,14 @@ export default function Header(props: any) {
         >
           {data.map((planet) => {
             return (
-              <Link to={planet.name} key={planet.name}>
+              <Link
+                to={planet.name}
+                key={planet.name}
+                onClick={() => {
+                  setHamgurgerMenu(false);
+                  console.log("hi");
+                }}
+              >
                 <div className="flex justify-between mx-6 py-5 items-center border-b border-white border-opacity-10">
                   <div className="flex gap-6 items-center">
                     <div

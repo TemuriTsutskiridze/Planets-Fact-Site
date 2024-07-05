@@ -28,20 +28,12 @@ function App() {
       <Header isSmallScreen={isSmallScreen} />
 
       <Routes>
+        <Route path="/" element={<Planet isSmallScreen={isSmallScreen} />} />
+
         <Route
-          path="/"
-          element={<Planet isSmallScreen={isSmallScreen} planet={data[2]} />}
+          path=":planetName"
+          element={<Planet isSmallScreen={isSmallScreen} />}
         />
-        {data.map((planet, index) => {
-          return (
-            <Route
-              path={planet.name}
-              element={<Planet planet={planet} isSmallScreen={isSmallScreen} />}
-              key={planet.name}
-              index={index === 0 ? true : undefined}
-            />
-          );
-        })}
       </Routes>
     </div>
   );

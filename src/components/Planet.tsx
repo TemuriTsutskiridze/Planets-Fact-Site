@@ -1,15 +1,21 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom";
+import data from "../data/data.json";
 import IPlanet from "../interfaces/Planet";
 
 import SourceIcon from "/assets/icon-source.svg";
 
 interface IProps {
   isSmallScreen: boolean;
-  planet: IPlanet;
 }
 
 export default function Planet(props: IProps) {
   const [activeState, setActiveState] = useState<number>(0);
+
+  const { planetName } = useParams();
+
+  const planet: IPlanet =
+    data.find((planet) => planet.name === planetName) || data[2];
 
   return (
     <>
@@ -23,7 +29,7 @@ export default function Planet(props: IProps) {
                     activeState === index ? "border-b-4 border-solid" : ""
                   } cursor-pointer pb-[1.7rem] parent-class-prefix-surface`}
                   style={{
-                    borderColor: props.planet["planet-color"],
+                    borderColor: planet?.["planet-color"],
                   }}
                   onClick={() => {
                     setActiveState(index);
@@ -41,18 +47,18 @@ export default function Planet(props: IProps) {
             <img
               src={
                 activeState === 0
-                  ? props.planet.images.planet
-                  : props.planet.images.internal
+                  ? planet?.images.planet
+                  : planet?.images.internal
               }
-              alt={props.planet.name}
+              alt={planet?.name}
             />
             {activeState === 2 ? (
               <img
-                src={props.planet.images.geology}
-                alt={`${props.planet.name} geology`}
+                src={planet?.images.geology}
+                alt={`${planet?.name} geology`}
                 className="absolute left-1/2 transform -translate-x-1/2 bottom-[-8rem]"
                 style={{
-                  width: props.planet["image-sizes"].mobile.geology.width,
+                  width: planet?.["image-sizes"].mobile.geology.width,
                 }}
               />
             ) : null}
@@ -61,24 +67,24 @@ export default function Planet(props: IProps) {
           <div className="mt-[9.8rem] md:flex md:justify-between md:w-full md:px-[3.9rem] md:items-end desktop:flex-col desktop:px-0 desktop:justify-between desktop:items-start desktop:w-fit">
             <div className="flex flex-col gap-4 justify-center text-center text-white md:items-start md:text-left">
               <h1 className="font-antonio text-[4rem] font-normal leading-13 uppercase md:text-[4.8rem] md:leading-[6.2rem]">
-                {props.planet.name}
+                {planet?.name}
               </h1>
               <p className="font-spartan text-[1.1rem] leading-[2.2rem] font-normal mx-[6rem] max-w-[60rem] md:mx-0 md:max-w-[45ch] md:text-[1.5rem]">
                 {activeState === 0
-                  ? props.planet.overview.content
+                  ? planet?.overview.content
                   : activeState === 1
-                  ? props.planet.structure.content
-                  : props.planet.geology.content}
+                  ? planet?.structure.content
+                  : planet?.geology.content}
               </p>
               <div className="flex items-center gap-2 justify-center mt-[3.2rem]">
                 <span>Source: </span>
                 <a
                   href={
                     activeState === 0
-                      ? props.planet.overview.source
+                      ? planet?.overview.source
                       : activeState === 1
-                      ? props.planet.structure.source
-                      : props.planet.geology.source
+                      ? planet?.structure.source
+                      : planet?.geology.source
                   }
                   target="_blank"
                   className="flex items-center gap-2 text-white text-opacity-50 text-[1.2rem] leading-[2.5rem] underline"
@@ -109,7 +115,7 @@ export default function Planet(props: IProps) {
                       style={{
                         background: `${
                           element.currentNumber === activeState
-                            ? props.planet["planet-color"]
+                            ? planet?.["planet-color"]
                             : "none"
                         }`,
                         border: `${
@@ -144,7 +150,7 @@ export default function Planet(props: IProps) {
                   {element.name}
                 </p>
                 <p className="font-antonio text-[2rem] leading-[2.6rem] tracking-[-0.75px] md:text-[2.4rem] md:leading-[3.1rem] desktop:text-10 desktop:leading-[5.1rem]">
-                  {props.planet[element.info]}
+                  {planet?.[element.info]}
                 </p>
               </div>
             );

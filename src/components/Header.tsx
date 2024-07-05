@@ -57,7 +57,6 @@ export default function Header(props: any) {
                 key={planet.name}
                 onClick={() => {
                   setHamgurgerMenu(false);
-                  console.log("hi");
                 }}
               >
                 <div className="flex justify-between mx-6 py-5 items-center border-b border-white border-opacity-10">
